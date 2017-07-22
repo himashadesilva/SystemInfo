@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.dsilva</groupId>
+  <artifactId>SystemInfo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <description>This can be used to check system infomtion</description>
+  <packaging>jar</packaging>
+
+  <name>SystemInfo</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.jolira/onejar-maven-plugin -->
+    <dependency>
+      <groupId>com.jolira</groupId>
+      <artifactId>onejar-maven-plugin</artifactId>
+      <version>1.4.4</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.jolira</groupId>
+        <artifactId>onejar-maven-plugin</artifactId>
+        <version>1.4.4</version>
+        <executions>
+          <execution>
+            <configuration>
+                <mainClass>com.dsilva.Main</mainClass>
+                <onejarVersion>0.97</onejarVersion>
+                <attachToBuild>true</attachToBuild>
+            </configuration>
+              <goals>
+                  <goal>one-jar</goal>
+              </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
