@@ -13,6 +13,7 @@ To Run :
   options : help, m, fm ,hd ,os, ip etc.
   
   ex1: SystemInfor -help
+  
     usage: java SystemInfo [options]
     -m      Show total memory
     -fm     Show free memory
@@ -22,6 +23,7 @@ To Run :
     -hd     Show HardDisk Details
     
    ex2: SystemInfo -os
+    
     OS name :               Windows 10
     OS version :            10.0
     OS architecture :       amd64
