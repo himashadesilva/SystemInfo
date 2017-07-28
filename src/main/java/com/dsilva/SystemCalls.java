@@ -17,6 +17,7 @@ public class SystemCalls implements SystemCallMethods {
 
     public String getHelp() {
         return "usage: java SystemInfo [options]\n" +
+                "options : \n" +
                 "-m\tShow total memory\n" +
                 "-fm\tShow free memory\n" +
                 "-um\tShow used memory\n" +

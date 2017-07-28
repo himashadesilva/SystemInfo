@@ -28,34 +28,40 @@ public class Main {
 
         SystemCalls system = new SystemCalls();
 
-        if (args[0].split(DASH)[1].equals(HELP)) {
-            System.out.println(system.getHelp());
-        } else if (args[0].split(DASH)[1].equals(MEMORY)) {
-            System.out.println("Total Memory : "+ system.getTotalMemory()+"MB");
+        try {
 
-        } else if (args[0].split(DASH)[1].equals(FREE_MEMORY)) {
-            System.out.println("Free Memory : "+ system.getFreeMemory());
-        } else if (args[0].split(DASH)[1].equals(USED_MEMORY)) {
-            System.out.println("Used Memory : "+ system.getUsedMemory());
-        } else if (args[0].split(DASH)[1].equals(OS)) {
-            System.out.println("OS Name\t\t\t: "+ system.getOSName());
-            System.out.println("OS Version\t\t: "+ system.getOSVersion());
-            System.out.println("OS Architecture\t\t: "+ system.getOSArchitecture());
-            System.out.println("Available processors\t: "+ system.getAvailableProcessors());
-        } else if (args[0].split(DASH)[1].equals(IP)) {
-            System.out.println("IP addrres : "+ system.getIP());
-        } else if (args[0].split(DASH)[1].equals(HARDDISK)) {
-            system.printHardDiskDetails();
-        } else if(args[0].split(DASH)[1].equals(ALL)){
-            System.out.println("Total Memory : "+ system.getTotalMemory()+"MB");
-            System.out.println("Used Memory : "+ system.getUsedMemory());
-            System.out.println("Free Memory : "+ system.getFreeMemory());
-            System.out.println("OS Name\t\t\t: "+ system.getOSName());
-            System.out.println("OS Version\t\t: "+ system.getOSVersion());
-            System.out.println("OS Architecture\t\t: "+ system.getOSArchitecture());
-            System.out.println("Available processors\t: "+ system.getAvailableProcessors());
-            System.out.println("IP addrres : "+ system.getIP());
-            system.printHardDiskDetails();
+
+            if (args[0].split(DASH)[1].equals(HELP)) {
+                System.out.println(system.getHelp());
+            } else if (args[0].split(DASH)[1].equals(MEMORY)) {
+                System.out.println("Total Memory : " + system.getTotalMemory() + "MB");
+
+            } else if (args[0].split(DASH)[1].equals(FREE_MEMORY)) {
+                System.out.println("Free Memory : " + system.getFreeMemory());
+            } else if (args[0].split(DASH)[1].equals(USED_MEMORY)) {
+                System.out.println("Used Memory : " + system.getUsedMemory());
+            } else if (args[0].split(DASH)[1].equals(OS)) {
+                System.out.println("OS Name\t\t\t: " + system.getOSName());
+                System.out.println("OS Version\t\t: " + system.getOSVersion());
+                System.out.println("OS Architecture\t\t: " + system.getOSArchitecture());
+                System.out.println("Available processors\t: " + system.getAvailableProcessors());
+            } else if (args[0].split(DASH)[1].equals(IP)) {
+                System.out.println("IP addrres : " + system.getIP());
+            } else if (args[0].split(DASH)[1].equals(HARDDISK)) {
+                system.printHardDiskDetails();
+            } else if (args[0].split(DASH)[1].equals(ALL)) {
+                System.out.println("Total Memory : " + system.getTotalMemory() + "MB");
+                System.out.println("Used Memory : " + system.getUsedMemory());
+                System.out.println("Free Memory : " + system.getFreeMemory());
+                System.out.println("OS Name\t\t\t: " + system.getOSName());
+                System.out.println("OS Version\t\t: " + system.getOSVersion());
+                System.out.println("OS Architecture\t\t: " + system.getOSArchitecture());
+                System.out.println("Available processors\t: " + system.getAvailableProcessors());
+                System.out.println("IP addrres : " + system.getIP());
+                system.printHardDiskDetails();
+            }
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Invalid arguments. \"Main -help\" for help");
         }
 
     }
